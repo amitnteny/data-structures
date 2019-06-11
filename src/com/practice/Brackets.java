@@ -21,7 +21,7 @@ public class Brackets {
         Stack<Character> stack = new Stack<>();
         for (char c: expression.toCharArray()) {
             if (isOpenTerm(c)) {
-                stack.add(c);
+                stack.push(c);
             } else {
                 if (stack.isEmpty() || !isMatching(stack.pop(), c)) {
                     return false;
