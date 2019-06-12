@@ -13,9 +13,9 @@ public class CycleInALinkedList {
         if (head == null) {
             return false;
         }
-        Node fast = head;
+        Node fast = head.next;
         Node slow = head;
-        while (fast != null && slow != null) {
+        while (fast != null && fast.next != null && slow != null) {
             if (fast == null) {
                 return true;
             }
